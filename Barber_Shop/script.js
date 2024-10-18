@@ -16,3 +16,7 @@ menu.addEventListener('click', () => {
         menu.style.width = "20px"
     }
 })
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000
+});

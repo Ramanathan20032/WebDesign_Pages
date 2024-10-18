@@ -16,11 +16,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Barber - pratice</title>
   </head>
   <body>
+    
     <!-- Banner -->
     <section class="banner">
       <img src="Images/logo.png" alt="logo" class="logo" />
@@ -37,11 +39,11 @@
     <!-- Side-Nav -->
     <div class="side-nav">
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">FEATURES</a></li>
-        <li><a href="#">SERVICES</a></li>
-        <li><a href="#">TESTIMONIALS</a></li>
-        <li><a href="#">MEET US</a></li>
+        <li><a href=".banner">HOME</a></li>
+        <li><a href=".feature-page">FEATURES</a></li>
+        <li><a href=".service">SERVICES</a></li>
+        <li><a href=".testimonial">TESTIMONIALS</a></li>
+        <li><a href=".footer">MEET US</a></li>
       </ul>
     </div>
 
@@ -52,57 +54,242 @@
 
     <!-- feature-page -->
     <section class="feature-page">
-        <div class="title-text">
-            <p>FEATURES</p>
-            <h1>Why Choose Us</h1>
+      <div class="title-text">
+        <p>FEATURES</p>
+        <h1>Why Choose Us</h1>
+      </div>
+
+      <!-- feature-box -->
+      <div class="feature-box">
+        <!-- features -->
+        <div class="features">
+          <!-- 1 -->
+          <h1>Experienced Staff</h1>
+          <div class="feature-desc">
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-halved fa-xl"></i>
+            </div>
+            <div class="feature-text">
+              <p>
+                consectetur adipisicing elit. Ipsum, cupiditate mollitia porro
+                aspernatur nihil quae!
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <h1>Pre Booking Online</h1>
+          <div class="feature-desc">
+            <div class="feature-icon">
+              <i class="fa-solid fa-square-check fa-xl"></i>
+            </div>
+            <div class="feature-text">
+              <p>
+                Lorem, ipsum dolor sit Ipsum, cupiditate mollitia porro
+                aspernatur nihil quae!
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <h1>Affordable Cost</h1>
+          <div class="feature-desc">
+            <div class="feature-icon">
+              <i class="fa-solid fa-indian-rupee-sign fa-xl"></i>
+            </div>
+            <div class="feature-text">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                cupiditate mollitia!
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- feature-box -->
-        <div class="feature-box">
-
-            <!-- features -->
-            <div class="features">
-                <!-- 1 -->
-                <h1>Experienced Staff</h1>
-                <div class="feature-desc">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-shield-halved fa-xl"></i>
-                    </div>
-                    <div class="feature-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate mollitia porro aspernatur nihil quae!</p>
-                    </div>
-                </div>
-
-                <!-- 2 -->
-                <h1>Pre Booking Online</h1>
-                <div class="feature-desc">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-square-check fa-xl"></i>
-                    </div>
-                    <div class="feature-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate mollitia porro aspernatur nihil quae!</p>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <h1>Affordable Cost</h1>
-                <div class="feature-desc">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-indian-rupee-sign fa-xl"></i> 
-                    </div>
-                    <div class="feature-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate mollitia porro aspernatur nihil quae!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- features-img -->
-            <div class="features-img">
-                <img src="Images/barber-man.jpg" alt="">
-            </div>
+        <!-- features-img -->
+        <div class="features-img">
+          <img src="Images/barber-man.jpg" alt="" />
         </div>
+      </div>
+    </section>
+
+    <!-- Service-page -->
+    <section class="service">
+      <div class="title-text">
+        <p>SERVICES</p>
+        <h1>We Provide Better</h1>
+      </div>
+      <!-- Service box -->
+      <div class="service-box">
+        <!-- Single service -->
+        <!-- 1 -->
+        <div class="single-service">
+          <img src="Images/pic-1.jpg" alt="" />
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Hair Styling</h3>
+            <hr />
+            <p>
+              This is test under description of barber foundation this is test
+              under description of barber foundation
+            </p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="single-service">
+          <img src="Images/pic-2.jpg" alt="" />
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Beard Trim</h3>
+            <hr />
+            <p>
+              This is test under description of barber foundation this is test
+              under description of barber foundation
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="single-service">
+          <img src="Images/pic-3.jpg" alt="" />
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Hair Cut</h3>
+            <hr />
+            <p>
+              This is test under description of barber foundation this is test
+              under description of barber foundation
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="single-service">
+          <img src="Images/pic-4.jpg" alt="" />
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Dry Shampoo</h3>
+            <hr />
+            <p>
+              This is test under description of barber foundation this is test
+              under description of barber foundation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial-page -->
+    <section class="testimonial">
+      <div class="title-text">
+        <p>TESTIMONIAL</p>
+        <h1>What Client Says</h1>
+      </div>
+
+      <!-- testimonial-row -->
+      <div class="testimonial-row">
+        <!-- testimonial-col -->
+        <!-- 1 -->
+        <div class="testimonial-col">
+          <div class="user">
+            <img src="Images/img-1.jpg" alt="" />
+            <div class="user-info">
+              <h4>KEN NORMAN<i class="fa-brands fa-x-twitter fa-sm"></i></h4>
+              <small>@kennorman</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+            perferendis odit modi totam culpa veniam fugit incidunt, maiores
+            rerum omnis aliquid, minima amet ipsum aspernatur accusamus saepe
+            quisquam quas in!
+          </p>
+        </div>
+
+        <!-- testimonial-col -->
+        <!-- 2 -->
+        <div class="testimonial-col">
+          <div class="user">
+            <img src="Images/img-2.jpg" alt="" />
+            <div class="user-info">
+              <h4>Liara Karian<i class="fa-brands fa-x-twitter fa-sm"></i></h4>
+              <small>@liarakarian</small>
+            </div>
+          </div>
+          <p>
+            culpa ipsum dolor sit amet consectetur adipisicing elit. Ut
+            perferendis odit modi totam veniam fugit incidunt, maiores rerum
+            omnis.
+          </p>
+        </div>
+
+        <!-- testimonial-col -->
+        <!-- 3 -->
+        <div class="testimonial-col">
+          <div class="user">
+            <img src="Images/img-3.jpg" alt="" />
+            <div class="user-info">
+              <h4>Ricky Danial<i class="fa-brands fa-x-twitter fa-sm"></i></h4>
+              <small>@rickydanial</small>
+            </div>
+          </div>
+          <p>
+            odit modi dolor sit amet consectetur adipisicing elit. Ut
+            perferendis amet elit totam culpa veniam fugit incidunt, maiores
+            rerum omnis aliquid, minima amet saepe quisquam quas in!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Page -->
+    <section class="footer">
+      <img src="Images/footer-img.png" alt="" class="footer-img"/>
+      <div class="title-text">
+        <p>CONTACT</p>
+        <h1>Visit Shop Today</h1>
+      </div>
+
+      <!-- footer-row -->
+      <div class="footer-row">
+
+        <!-- footer-left -->
+        <div class="footer-left">
+          <h1>Opening Hours</h1>
+          <p>
+            <i class="fa-solid fa-clock fa-sm"></i>Monday to Friday - 9am to 9pm
+          </p>
+          <p>
+            <i class="fa-solid fa-clock fa-sm"></i>Saturday and Sunday - 8am to
+            11pm
+          </p>
+        </div>
+
+        <!-- footer-right -->
+        <div class="footer-right">
+          <h1>Get in Touch</h1>
+          <p>
+            #30 abc colony, xyz City In<i
+              class="fa-solid fa-location-dot fa-sm"
+            ></i>
+          </p>
+          <p>
+            example@website.com<i class="fa-solid fa-paper-plane fa-sm"></i>
+          </p>
+          <p>+01 123456789<i class="fa-solid fa-phone fa-sm"></i></p>
+        </div>
+      </div>
+
+      <!-- social-links -->
+      <div class="social-links">
+        <i class="fa-brands fa-facebook fa-sm"></i>
+        <i class="fa-brands fa-instagram fa-sm"></i>
+        <i class="fa-brands fa-x-twitter fa-sm"></i>
+        <i class="fa-brands fa-youtube fa-sm"></i>
+        <p>© Copy Right Barber - Shop Design</p>
+      </div>
 
     </section>
   </body>
 </html>
-
