@@ -1,0 +1,935 @@
+/* font-family: "Jost", sans-serif; */
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Cormorant Garamond", serif; */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    color: #363636;
+}
+body{
+    background: #fff;
+}
+a{
+    text-decoration: none;
+}
+.main-container{
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+}
+.sub-main-container{
+    width: 100%;
+    /* position: relative; */
+} 
+
+/* -------------------------------------------------------------------------------- */
+/* SECTION - 1 */
+.section-1{
+    /* z-index: 1; */
+    width: 100%;
+    background: #0571b9;
+    padding: 16px 0px;
+}
+.section-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin: 0 45px;
+    /* padding: 0 6.25%;
+    margin: 0 9.8%; */
+}
+.section-contact p{
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+.socialMedia-info{
+    font-family: "Jost", sans-serif;
+    color: #fff;
+}
+.socialMedia-info .email{
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.socialMedia-info .email i{
+    margin-right: 10px;
+}
+.socialMedia-info i{
+    color: #fff;
+    font-size: 14px;
+}
+.fb-icon{
+    width: 28px;
+    padding: 0px 5px;
+    border-radius: 50%;
+    /* border: 1px solid #fff; */
+    background: #3b5998;
+}
+.insta-icon{
+    width: 28px;
+    padding: 0px 5px;
+    border-radius: 50%;
+    /* border: 1px solid #fff; */
+    background: #262626;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* SECTION - 2 */
+.section-2 {
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 1s;
+}
+.section-2 .nav-container {
+    transition: background 0.3s, color 0.3s;
+    padding: 15px;
+}
+.section-2 .nav-container nav {
+    color: #363636;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.25rem;
+    transition: color 0.3s;
+}
+.section-2 .nav-container nav a img {
+    width: 139.99px;
+    height: 79.94px;
+    transition: width 0.3s, height 0.3s;
+}
+.section-2 .nav-container ul {
+    display: flex;
+    align-items: center;
+}
+.section-2 .nav-container ul li {
+    list-style: none;
+    display: inline-block;
+}
+.section-2 .nav-container ul li a{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 15px;
+    letter-spacing: 0.5px;
+    /* transition: color 0.3s; */
+    position: relative;
+}
+/* Underline span */
+.section-2 .nav-container ul li a .underline{
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #0571b9;
+    transition: width 0.3s ease;
+}
+/* Initially underline the HOME item */
+.section-2 .nav-container ul li:first-child a .underline {
+    width: 70%;
+    transform: translateX(15px);
+}
+.section-2 .nav-container ul li a:hover .underline {
+    width: 70%;
+    transform: translateX(15px);
+}
+.section-2 .nav-container .orderButton {
+    color: #fff;
+    font-size: 13px;
+    background-color: #0571b9;
+    padding: 15px 10px;
+    transform: translateX(-20px);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: background 0.3s, color 0.3s;
+}
+.section-2 .nav-container .orderButton i{
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Sticky Navbar Styles - stick on 30% */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    color: #363636;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Sidebar icon container */
+.sidebar-icon {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width: 20px; 
+    height: 25px; 
+    cursor: pointer;
+    display: none;
+}
+/* Each line of the icon */
+.sidebar-icon span {
+    display: block;
+    height: 2px;          
+    background-color: #0571b9; 
+    margin-bottom: 5px;
+    border-radius: 2px;   
+    transition: 0.3s;     
+}
+
+/* side-NavBar */
+.side-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    /* border: 2px solid hotpink; */
+}
+
+
+/* side-nav-container */
+.side-nav .side-nav-container{
+    padding: 0px 30px 60px;
+    font-family: "Jost", sans-serif;
+    background-color: #000;
+    color: #fff;
+    max-width: 320px ;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 2000;
+    overflow-y: auto;
+} 
+
+.side-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* sideNav-image-cross */
+.side-nav .side-nav-container .sideNav-image-cross{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 0 0 30px -30px;
+}
+.side-nav .side-nav-container .sideNav-image-cross a img{
+    width: 74.99px;
+    height: 46.74px;
+}
+.side-nav .side-nav-container .sideNav-image-cross p{
+    margin-left: 40px;
+}
+.side-nav .side-nav-container .sideNav-image-cross p i{
+    cursor: pointer;
+    color: #fff;
+}
+
+/* ul li a */
+.side-nav .side-nav-container ul{
+    width: 100%;
+}
+.side-nav .side-nav-container ul li{
+    list-style: none;
+}
+.side-nav .side-nav-container ul li a{
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+.side-nav .side-nav-container ul li:first-child a{
+    color: #0571b9;
+}
+.side-nav .side-nav-container ul li a:hover{
+    color: #363636;
+}
+
+/* ul li a sideNav-orderButton */
+.side-nav .side-nav-container .sideNav-orderButton a .fa-caret-down{
+    color: #fff;
+    margin-left: 55px;
+}
+.side-nav .side-nav-container .sideNav-orderButton:hover a .fa-caret-down{
+    color: #363636;
+}
+
+/* sideNav-socialMedia-icon */
+.side-nav .side-nav-container .sideNav-socialMedia-icon{
+    margin: 20px 0;
+}
+.side-nav .side-nav-container .sideNav-socialMedia-icon a i{
+    font-size: 14px;
+    color: #fff;
+}
+.side-nav .side-nav-container .sideNav-socialMedia-icon a i:hover{
+    color: #363636
+}
+.side-nav .side-nav-container .sideNav-socialMedia-icon .sideNav-insta-icon{
+    padding-left: 10px;
+}
+
+/* sideNav-copyRight */
+.side-nav .side-nav-container .sideNav-copyRight{
+    margin-bottom: 25px;
+}
+.side-nav .side-nav-container .sideNav-copyRight p{
+    font-size: 14px;
+    color: #fff;
+}
+.side-nav .side-nav-container .sideNav-copyRight p:hover{
+    color: #363636;
+}
+
+/* sideNav-location-email */
+.side-nav .side-nav-container .sideNav-location-email{
+    padding: 40px 0 0;
+}
+.side-nav .side-nav-container .sideNav-location-email p{
+    color: #fff;
+}
+.side-nav .side-nav-container .sideNav-location-email p i{
+    color: #fff;
+}
+.side-nav .side-nav-container .sideNav-location-email p:hover{
+    color: #363636;
+}
+.side-nav .side-nav-container .sideNav-location-email p:hover i{
+    color: #363636;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - section 1, section 2*/
+@media screen and (max-width: 1024px){
+    .section-1{
+        display: none;
+    }
+    .section-2 .nav-container nav ul{
+        display: none;
+    }
+    .sidebar-icon{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    .section-2 .nav-container nav {
+        padding: 0 2.75rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .section-2 {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 1s;
+        padding: 0;
+        height: 31vh;
+        width: 100%;
+    }
+    .section-2 .nav-container nav {
+        padding: 0%;
+    }
+    .section-2 .nav-container nav a img {
+        width: 99.99px;
+        height: 55.94px;
+    }
+    .section-2 .nav-container{
+        padding: 10px;
+    }
+    .sidebar-icon {
+        width: 17px; 
+        height: 21px; 
+    }
+    .sidebar-icon span{
+        margin-bottom: 3px;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* section-3 */
+.section-3{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    /* border: 2px solid black; */
+}
+.section-3 .sub-section-3{
+    padding: 120px 5.3rem 0;
+    margin: 0 160px;
+}
+
+/* .success-story-container */
+.section-3 .success-story-container{
+    display: flex;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding-bottom: 20px;
+}
+.section-3 .success-story-container .success-story{
+    flex-basis: 50%;
+}
+.section-3 .success-story-container .empty-space{
+    flex-basis: 50%;
+}
+.section-3 .success-story-container .success-story p{
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #0571b9;
+}
+.section-3 .success-story-container .success-story p::after{
+    content: "";
+    display: inline-block;
+    width: 70px; 
+    height: 1px; 
+    background-color: #0571b9; 
+    position: relative;
+    top: -5px;
+    margin-left: 25px; 
+}
+.section-3 .success-story-container .success-story h3{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 74px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* .description-image-container */
+.section-3 .description-image-container{
+    /* border: 2px solid hotpink; */
+    width: 100%;
+    display: flex;
+}
+.section-3 .description-image-container .desc-img-wrapper{
+    /* border: 2px solid yellowgreen; */
+    flex-basis: 50%;
+    position: relative;
+}
+.section-3 .description-image-container .img-wrapper{
+    /* border: 2px solid goldenrod; */
+    flex-basis: 50%;
+    position: relative;
+}
+.section-3 .description-image-container .desc-img-wrapper .desc-container p{
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #363636;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+}
+.section-3 .description-image-container .desc-img-wrapper .desc-container div{
+    margin-top: 30px;
+}
+.section-3 .description-image-container .desc-img-wrapper .desc-container div button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: #0571b9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+.section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1{
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+.section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+    width: 430px;
+    height: 286px;
+}
+.section-3 .description-image-container .img-wrapper .seceret-of-success-img-2{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+.section-3 .description-image-container .img-wrapper .seceret-of-success-img-2 img{
+    width: 365px;
+    height: 520px;
+}
+
+/* CSS for the first scroll only */
+/* ----------------------------------------------------------- */
+.seceret-of-success-img-1 img, .seceret-of-success-img-2 img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state - images appear smoothly as they scroll into view */
+.seceret-of-success-img-1.visible img, .seceret-of-success-img-2.visible img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - section-3 */
+@media screen and (max-width: 1670px) {
+    .section-3 .sub-section-3{
+        margin: 0 80px;
+    }
+}
+
+@media screen and (max-width: 1565px){
+    .section-3 .success-story-container .success-story h3{
+        font-size: 74px;
+    }
+    .section-3 .sub-section-3{
+        margin: 0;
+    }
+    .section-3 .success-story-container .success-story{
+        flex-basis: 50%;
+    }
+    .section-3 .success-story-container .empty-space{
+        flex-basis: 50%;
+    }
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1{
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1503px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1{
+        margin-top: 45px;
+        margin-bottom: 20px;
+    }
+    .section-3 .success-story-container .success-story h3{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 65px;
+    }
+}
+
+@media screen and (max-width: 1215px){
+    .section-3 .success-story-container .success-story{
+        flex-basis: 60%;
+    }
+    .section-3 .success-story-container .empty-space{
+        flex-basis: 35%;
+    }
+}
+
+@media screen and (max-width: 1181px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    .section-3 .description-image-container .desc-img-wrapper .desc-container div{
+        margin-top: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 1025px){
+    .section-3 .success-story-container .success-story h3{
+        font-size: 48px;
+    }
+    .section-3 .success-story-container .success-story{
+        flex-basis: 100%;
+    }
+    .section-3 .success-story-container .empty-space{
+        flex-basis: 0%;
+    }
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 400px;
+        height: 260px;
+    }
+    .section-3 .description-image-container .img-wrapper .seceret-of-success-img-2 img{
+        width: 335px;
+        height: 490px;
+    }
+}
+
+@media screen and (max-width: 982px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 380px;
+        height: 200px;
+    }
+    .section-3 .description-image-container .img-wrapper .seceret-of-success-img-2 img{
+        width: 305px;
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 910px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 310px;
+        height: 170px;
+    }
+    .section-3 .description-image-container .img-wrapper .seceret-of-success-img-2 img{
+        width: 275px;
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 854px){
+    .section-3 .description-image-container .img-wrapper .seceret-of-success-img-2 img{
+        width: 275px;
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .section-3 .success-story-container .success-story h3{
+        font-size: 42px;
+    }
+    .section-3 .description-image-container .desc-img-wrapper{
+        flex-basis: 100%;
+        position: relative;
+    }
+    .section-3 .description-image-container .img-wrapper{
+        display: none;
+        position: relative;
+    }
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1{
+        width: 80%;
+        margin: 20px auto 10px;
+    }
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+       width: 480px;
+       height: 300px;
+    }
+}
+
+@media screen and (max-width: 775px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 460px;
+        height: 300px;
+     }
+}
+
+@media screen and (max-width: 750px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 440px;
+        height: 300px;
+        padding-right: 15px;
+     }
+}
+
+@media screen and (max-width: 700px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        padding-right: 30px;
+     }
+}
+
+@media screen and (max-width: 670px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 420px;
+        height: 280px;
+     }
+}
+
+@media screen and (max-width: 640px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 390px;
+        height: 260px;
+     }
+}
+
+@media screen and (max-width: 610px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 360px;
+        height: 240px;
+     }
+}
+
+@media screen and (max-width: 580px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        width: 330px;
+        height: 200px;
+     }
+}
+
+@media screen and (max-width: 560px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        padding-left: 10px;
+        width: 310px;
+        height: 200px;
+     }
+}
+
+@media screen and (max-width: 520px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        padding-left: 15px;
+        width: 280px;
+        height: 170px;
+     }
+     .section-3 .description-image-container .desc-img-wrapper .desc-container div button{
+        letter-spacing: 0.2px;
+        padding: 8px 16px;
+        border-radius: 1px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        padding-left: 18px;
+        padding-right: 35px;
+        width: 260px;
+        height: 150px;
+     }
+}
+
+@media screen and (max-width: 460px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        padding-left: 22px;
+        padding-right: 45px;
+        width: 240px;
+        height: 130px;
+     }
+     .section-3 .success-story-container .success-story p::after{
+        width: 40px; 
+        position: relative;
+        top: -5px;
+        margin-left: 10px; 
+    }
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        margin-right: 40px;
+        margin-left: 30px;
+    }
+    .section-3 .sub-section-3{
+        padding: 70px 2.5rem 0;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .section-3 .description-image-container .desc-img-wrapper .seceret-of-success-img-1 img{
+        margin-right: 30px;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* section - 4 */
+.section-4{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    /* border: 2px solid black; */
+}
+
+/* section-4 sub-section */
+.section-4 .sub-section{
+    /* border: 2px solid black; */
+    padding: 100px 5.3rem 60px;
+    margin: 0 160px;
+}
+.section-4 .sub-section .menu-container{
+    display: flex;
+}
+
+/* section - 1 (3) */
+.section-4 .sub-section .menu-container .section-1{
+    /* border: 2px solid yellow; */
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* section-4 - each section transisitons */
+
+/* Initial style before the transition */
+.section-4 .sub-section .menu-container .sec-1,
+.section-4 .sub-section .menu-container .sec-2,
+.section-4 .sub-section .menu-container .sec-3 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add delays for each section */
+.section-4 .sub-section .menu-container .sec-1.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s; /* Start immediately */
+}
+
+.section-4 .sub-section .menu-container .sec-2.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s; /* Start 0.3s after sec-1 */
+}
+
+.section-4 .sub-section .menu-container .sec-3.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s; /* Start 0.6s after sec-1 */
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.section-4 .sub-section .menu-container .sec-1{
+    padding-right: 20px;
+}
+.section-4 .sub-section .menu-container .sec-2{
+    padding: 0 10px;
+}
+.section-4 .sub-section .menu-container .sec-3{
+    padding-left: 20px;
+}
+
+/* part - 1 */
+.section-4 .sub-section .menu-container .section-1 .part-1{
+    /* border: 2px solid yellowgreen; */
+}
+.section-4 .sub-section .menu-container .section-1 .part-1 .subtitle-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-4 .sub-section .menu-container .section-1 .part-1 .subtitle-title .subtitle{
+    margin-bottom: 8px;
+}
+.section-4 .sub-section .menu-container .section-1 .part-1 .subtitle-title .subtitle span{
+    font-size: 13px;
+    color: #0571b9;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.section-4 .sub-section .menu-container .section-1 .part-1 .subtitle-title .title{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* part - 2 */
+.section-4 .sub-section .menu-container .section-1 .part-2{
+    /* border: 2px solid hotpink; */
+}
+.section-4 .sub-section .menu-container .section-1 .part-2 .food-menu-main{
+    /* border: 2px solid #3b5998; */
+}
+.section-4 .sub-section .menu-container .section-1 .part-2 .food-menu-main .food-menu-title{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: #000;
+    padding-right: 8px;
+}
+.section-4 .sub-section .menu-container .section-1 .part-2 .food-menu-main .food-menu-title span{
+    font-family: "Cormorant Garamond", serif;
+    color: #000;
+    font-weight: 600;
+}
+.section-4 .sub-section .menu-container .section-1 .part-2 .food-menu-main .food-menu-details{
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    color: #363636;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    word-spacing: 0.2px;
+}
+/* Apply green background on text selection for .food-menu-details */
+.section-4 .sub-section .menu-container .section-1 .part-2 .food-menu-main .food-menu-details::selection {
+    /* background-color: #71a3c1; */
+    background-color: #8ba3d8;
+    color: white; 
+}
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - section-4 */
+@media screen and (max-width: 1670px) {
+    .section-4 .sub-section{
+        margin: 0 80px;
+    }
+}
+@media screen and (max-width: 1565px){
+    .section-4 .sub-section{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1024px){
+    .section-4 .sub-section{
+        padding-top: 50px;
+    }
+    .section-4 .sub-section .menu-container {
+        flex-direction: column;
+    }
+    .section-4 .sub-section .menu-container .section-1 {
+        flex: 1 1 100%; /* Flex-grow, flex-shrink, and 100% basis */
+        width: 100%;
+    }
+    .section-4 .sub-section .menu-container .section-1 .part-2 {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+    .section-4 .sub-section .menu-container .sec-1{
+        padding: 30px 0 0;
+    }
+    .section-4 .sub-section .menu-container .sec-2{
+        padding: 30px 0 0;
+    }
+    .section-4 .sub-section .menu-container .sec-3{
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 460px) {
+    .section-4 .sub-section{
+        padding: 70px 2.5rem 0;
+    }
+}
+@media screen and (max-width: 400px){
+
+}
+
+/* -------------------------------------------------------------------------------- */
+/* section - 5 */
+.section-5{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    border: 2px solid black;
+}
+
+/* section-5 sub-section */
+.section-5 .sub-section{
+    border: 2px solid black;
+    padding: 100px 5.3rem 60px;
+    margin: 0 160px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - section-5 */
+@media screen and (max-width: 1670px) {
+    .section-5 .sub-section{
+        margin: 0 80px;
+    }
+}
+@media screen and (max-width: 1565px){
+    .section-5 .sub-section{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 460px) {
+    .section-4 .sub-section{
+        padding: 70px 2.5rem 0;
+    }
+}
