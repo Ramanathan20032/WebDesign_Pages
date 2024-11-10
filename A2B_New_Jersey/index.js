@@ -138,3 +138,21 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScroll(); // Check if sections are already in view on page load
 });
 
+
+// section - 5 image transition 
+// Function to handle the scroll transition
+document.addEventListener('DOMContentLoaded', function() {
+    const imageContainer = document.querySelector('.img-col .image-container');
+
+    function handleScroll() {
+        const rect = imageContainer.getBoundingClientRect();
+        const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isInView && !imageContainer.classList.contains('in-view')) {
+            imageContainer.classList.add('in-view'); // Add class to trigger the transition
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check if the element is already in view on page load
+});
