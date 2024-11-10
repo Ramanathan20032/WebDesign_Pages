@@ -870,6 +870,7 @@ a{
 @media screen and (max-width: 1024px){
     .section-4 .sub-section{
         padding-top: 50px;
+        padding-bottom: 0px;
     }
     .section-4 .sub-section .menu-container {
         flex-direction: column;
@@ -906,14 +907,39 @@ a{
 .section-5{
     width: 100%;
     font-family: "Jost", sans-serif;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
-/* section-5 sub-section */
+/* section-5 .sub-section */
 .section-5 .sub-section{
-    border: 2px solid black;
-    padding: 100px 5.3rem 60px;
+    /* border: 2px solid rgb(35, 210, 50); */
+    padding: 0 5.3rem;
     margin: 0 160px;
+}
+
+/* section-5 .button-container */
+.section-5 .sub-section .button-container{
+    /* border: 2px solid tomato; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.section-5 .sub-section .button-container a{
+    cursor: pointer;
+}
+.section-5 .sub-section .button-container a button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background: #0571b9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 1px;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -928,8 +954,21 @@ a{
         margin: 0;
     }
 }
-@media screen and (max-width: 460px) {
-    .section-4 .sub-section{
-        padding: 70px 2.5rem 0;
+@media screen and (max-width: 598px){
+    .section-5 .sub-section .button-container a button{
+        padding: 8px 16px;
     }
 }
+@media screen and (max-width: 460px) {
+    .section-5 .sub-section{
+        padding: 0 2.5rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* section - 6 */
+
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - section-6 */
