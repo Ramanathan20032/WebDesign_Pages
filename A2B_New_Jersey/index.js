@@ -139,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// section - 5 image transition 
+// --------------------------------------------------------------------------------------------------
+// section - 6 image transition 
 // Function to handle the scroll transition
 document.addEventListener('DOMContentLoaded', function() {
     const imageContainer = document.querySelector('.img-col .image-container');
@@ -155,4 +156,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check if the element is already in view on page load
+});
+
+// --------------------------------------------------------------------------------------------------
+// section - 7 image transition 
+// Function to handle the scroll transition
+document.addEventListener('DOMContentLoaded', function() {
+    const imageContainers = document.querySelectorAll('.img-col .image-container');
+
+    function handleScroll() {
+        imageContainers.forEach(function(imageContainer) {
+            const rect = imageContainer.getBoundingClientRect();
+            const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+            if (isInView && !imageContainer.classList.contains('in-view')) {
+                imageContainer.classList.add('in-view'); // Add class to trigger the transition
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check if the elements are already in view on page load
 });
