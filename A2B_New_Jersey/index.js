@@ -178,3 +178,69 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check if the elements are already in view on page load
 });
+
+
+// --------------------------------------------------------------------------------------------------
+// section - 8 Testimonial
+// .testimonial-content, .testimonial-name - updating....
+// --------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    const testimonials = [
+        {
+            content: `One of the best South-Indian restaurants in New Jersey! Amazing mini-tiffin and appams! Must try if you are around Edison area.
+                      Service is quick and efficient. Loved the ambience and taste.`,
+            name: `Shravankumar Hiregoudar`
+        },
+        {
+            content: `One of the best South Indian taste! We really liked the food quality, taste and the prompt service. In spite of almost full capacity, food
+                      was served in a short time. Thanks to the server Rajesh. Very polite and prompt service . A2B deserves 5 star. I am A happy customer for sure.`,
+            name: `Suhas Biwalkar`
+        },
+        {
+            content: `This restaurant is amazing! It has a lot of variety of food and you will be satisfied with everything that you eat. You can pick your
+                      spice level and it will come accordingly. I personally love the Indochinese food that they have. Would recommend this place all the time if you
+                      are trying to have some great food.`,
+            name: `Om Sonani`
+        }
+    ];
+
+    const contentElement = document.querySelector('.section-8 .sub-section .testimonial-container .testimonial-content');
+    const nameElement = document.querySelector('.section-8 .sub-section .testimonial-container .testimonial-name');
+    const circleSpans = document.querySelectorAll('.section-8 .sub-section .testimonial-container .next-circle span');
+    let currentIndex = 0;
+    let interval;
+
+    function updateTestimonial(index) {
+        // Update content and name
+        contentElement.textContent = testimonials[index].content;
+        nameElement.textContent = testimonials[index].name;
+
+        // Update active span indicator
+        circleSpans.forEach((span, spanIndex) => {
+            span.classList.toggle('active', spanIndex === index);   // toggle --- if(add-class ,true) else(remove-class, false)
+        });
+
+        // Update currentIndex
+        currentIndex = index;
+    }
+
+    function startAutoRotation() {
+        interval = setInterval(() => {
+            const nextIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonial(nextIndex);
+        }, 4000);
+    }
+
+    // Initialize display and auto-rotation
+    updateTestimonial(currentIndex);
+    startAutoRotation();
+
+    // Event listeners for clicking on spans to manually navigate
+    circleSpans.forEach((span, index) => {
+        span.addEventListener('click', () => {
+            clearInterval(interval); // Stop auto-rotation
+            updateTestimonial(index); // Show the clicked testimonial
+            startAutoRotation(); // Restart auto-rotation
+        });
+    });
+});
