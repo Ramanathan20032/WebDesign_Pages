@@ -17,7 +17,7 @@ function switchBackground() {
     // Move to the next image in the array
     currentImageIndex = (currentImageIndex + 1) % images.length;
 }
-setInterval(switchBackground, 4000);    // change bachground for every 3s
+setInterval(switchBackground, 3000);    // change bachground for every 3s
 
 
 // --------------------------------------------------------------------------------
