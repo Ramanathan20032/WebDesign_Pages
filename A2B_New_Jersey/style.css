@@ -1887,6 +1887,10 @@ a{
     .footer .sub-section .footer-section-container .type-1 .part-1{
         height: 360px;
     }
+    .footer .sub-section .footer-section-container .type-1 .part-1 .logo img{
+        width: 115px;
+        height: 115px;
+    }
     .footer .sub-section .footer-section-container .type-1 .part-2{
         height: 360px;
     }
@@ -1931,7 +1935,8 @@ a{
         padding: 28px 0 38px;
     } 
     .footer .sub-section .footer-section-container .type-1 .part-1{
-        padding-right: 12px;
+        padding-right: 10px;
+        padding-left: 7px;
     }
     .footer .sub-section .footer-section-container .type-1 .part-2{
         padding-left: 12px;
@@ -1966,6 +1971,7 @@ a{
         flex-basis: 50%;
     }
     .footer .sub-section .footer-section-container .type-1 .part-1{
+        padding-left: 5px;
         padding-right: 30px;
         height: 320px;
     }
@@ -1982,9 +1988,9 @@ a{
         width: fit-content;
     }
     .footer .sub-section .footer-section-container .type-2 .part-3{
+        padding-left: 5px;
         padding-top: 30px;
         padding-right: 30px;
-        padding-left: 0;
         text-align: left;
         height: 320px;
     }
@@ -2025,19 +2031,25 @@ a{
         width: 100%;
     }
     .footer .sub-section .footer-section-container .type-1 .part-1{
-        padding: 0;
+        padding: 0 10px;
     }
     .footer .sub-section .footer-section-container .type-1 .part-2{
         padding: 0;
         padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .footer .sub-section .footer-section-container .type-2 .part-3{
         padding: 0;
         padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .footer .sub-section .footer-section-container .type-2 .part-4{
         padding: 0;
         padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .footer .sub-section .footer-section-container .type-2 .part-4 table {
         width: 100%; 
@@ -2067,5 +2079,103 @@ a{
 @media screen and (max-width: 480px) {
     .footer .sub-section{
         padding: 28px 2rem 38px;
+    }
+    .footer .sub-section .footer-section-container .type-2 .part-4{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* copy-right-section */
+
+/* section - 9 */
+.section-9{
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    background: #000;
+    color: #b0b0b0;
+}
+/* sub-section */
+.section-9 .sub-section{
+    padding: 0 3.9rem;
+    margin: 0 80px;
+}
+.section-9 .sub-section .copy-right-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 23px;
+}
+.section-9 .sub-section .copy-right-container .text-content{
+    flex-basis: 50%;
+    font-family: "Roboto", sans-serif;
+    color: #b0b0b0;
+    font-size: 15px;
+    line-height: 20px;
+}
+.section-9 .sub-section .copy-right-container .empty-space{
+    flex-basis: 50%;
+}
+.section-9 .sub-section .copy-right-container .text-content img{
+    margin-left: 5px;
+    width: 100px;
+    height: 28px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - copy-right-section */
+@media screen and (max-width: 1670px) {
+    .section-9 .sub-section{
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width: 1575px){
+    .section-9 .sub-section{
+        margin: 0;
+        padding: 0 2.5rem;
+    }
+}
+@media screen and (max-width: 1474px){
+    .section-9 .sub-section{
+        padding: 0 1rem;
+    } 
+}
+@media screen and (max-width: 1375px) {
+    .section-9 .sub-section{
+        padding: 0 1.9rem;
+    } 
+    .section-9 .sub-section .copy-right-container{
+        padding: 0 10px;
+        padding-top: 20px;
+        padding-bottom: 23px; 
+    }
+}
+@media screen and (max-width: 1140px) {
+    .section-9 .sub-section{
+        padding: 0;
+    } 
+}
+@media screen and (max-width: 1024px) {
+    .section-9 .sub-section .copy-right-container{
+        padding-right: 10px;
+        padding-left: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-9 .sub-section .copy-right-container .text-content{
+        width: 100%;
+    }
+    .section-9 .sub-section .copy-right-container .empty-space{
+        width: 0px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .section-9 .sub-section{
+        padding: 0 2rem;
+    }
+    .section-9 .sub-section .copy-right-container .text-content{
+        font-size: 13px;
     }
 }
