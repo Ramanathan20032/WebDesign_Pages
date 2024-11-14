@@ -1771,6 +1771,7 @@ a{
     font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s ease;
 }
 .footer .sub-section .footer-section-container .type-2 .part-3 .location a:hover{
     color: #0571b9;
@@ -1778,6 +1779,10 @@ a{
 .footer .sub-section .footer-section-container .type-2 .part-3 .location a i{
     margin-right: 3px;
     color: #fff;
+    transition: color 0.3s ease;
+}
+.footer .sub-section .footer-section-container .type-2 .part-3 .location a:hover i{
+    color: #0571b9;
 }
 .footer .sub-section .footer-section-container .type-2 .part-3 .mail{
     cursor: pointer;
@@ -1793,6 +1798,10 @@ a{
 .footer .sub-section .footer-section-container .type-2 .part-3 .mail i{
     margin-right: 3px;
     color: #eeeeee;
+    transition: color 0.3s ease;
+}
+.footer .sub-section .footer-section-container .type-2 .part-3 .mail:hover i{
+    color: #0571b9;
 }
 .footer .sub-section .footer-section-container .type-2 .part-3 .branches-btn a{
     text-decoration: none;
