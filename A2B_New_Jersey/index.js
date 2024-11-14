@@ -193,13 +193,14 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             content: `One of the best South Indian taste! We really liked the food quality, taste and the prompt service. In spite of almost full capacity, food
-                      was served in a short time. Thanks to the server Rajesh. Very polite and prompt service . A2B deserves 5 star. I am A happy customer for sure.`,
+                      was served in a short time. Thanks to the server Rajesh. Very polite and prompt service . A2B deserves 5 star. I am A happy customer for 
+                      sure.`,
             name: `Suhas Biwalkar`
         },
         {
             content: `This restaurant is amazing! It has a lot of variety of food and you will be satisfied with everything that you eat. You can pick your
-                      spice level and it will come accordingly. I personally love the Indochinese food that they have. Would recommend this place all the time if you
-                      are trying to have some great food.`,
+                      spice level and it will come accordingly. I personally love the Indochinese food that they have. Would recommend this place all the 
+                      time if you are trying to have some great food.`,
             name: `Om Sonani`
         }
     ];
