@@ -1,27 +1,6 @@
-// --------------------------------------------------------------------------------
-// background image Switching
-
-// Array of background images
-const images = [
-    'images/a2b-website-banner-1.jpg',
-    'images/a2b-website-banner-2.jpg'
-];
-
-let currentImageIndex = 0; // start index with 0.
-
-// To switch background image
-function switchBackground() {
-    // selecting the section element
-    const section_2 = document.querySelector('.section-2');
-    section_2.style.backgroundImage = `url(${images[currentImageIndex]})`;
-    // Move to the next image in the array
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-setInterval(switchBackground, 4000);    // change bachground for every 3s
-
 
 // --------------------------------------------------------------------------------
-// changing the styles on scrolling - 30% from the top
+// changing the styles on scrolling - 20% from the top
 
 document.addEventListener('DOMContentLoaded', function() {
     const scrollThreshold = window.innerHeight * 0.2;
