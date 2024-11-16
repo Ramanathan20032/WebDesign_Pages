@@ -1,6 +1,8 @@
 /* font-family: "Jost", sans-serif; */
 /* font-family: "Roboto", sans-serif; */
 /* font-family: "Cormorant Garamond", serif; */
+/* font-family: "Abhaya Libre", serif; */
+
 *{
     padding: 0%;
     margin: 0%;
@@ -91,6 +93,7 @@ a{
     background-size: cover;
     transition: background-image 1s;
     position: relative;
+    margin-bottom: 60px;
 }
 .section-2 .nav-container {
     transition: background 0.3s, color 0.3s;
@@ -345,15 +348,15 @@ a{
     .section-1{
         display: none;
     }
+    .section-2 {
+        height: 55vh;
+        width: 100%;
+    }
     .section-2 .nav-container nav ul{
         display: none;
     }
     .sidebar-icon{
         display: block;
-    }
-    .section-2 {
-        height: 55vh;
-        width: 100%;
     }
     .section-2 .title h1{
         font-size: 60px;
@@ -365,12 +368,12 @@ a{
     }
 }
 @media screen and (max-width: 767px){
-    .section-2 .title h1{
-        font-size: 48px;
-    }
     .section-2 {
         height: 40vh;
         width: 100%;
+    }
+    .section-2 .title h1{
+        font-size: 48px;
     }
 }
 @media screen and (max-width: 560px){
@@ -409,11 +412,217 @@ a{
 }
 
 
+/* -------------------------------------------------------------------------------- */
+/* location-wrapper */
+.location-wrapper{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+}
 
+/* .sub-section */
+.location-wrapper .sub-section{
+    padding: 0 5.3rem;
+    margin: 0 160px;
+    /* border: 2px solid black; */
+}
 
+/* location - container */
+.location-wrapper .sub-section .location-container{
+    margin-top: 25px;
+    /* border: 2px solid firebrick; */
+}
+.location-wrapper .sub-section .loc-3{
+    margin-bottom: 25px;
+}
+/* 1 */
+.location-wrapper .sub-section .location-container .title h3{
+    font-family: "Abhaya Libre", serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+}
+/* 2 */
+.location-wrapper .sub-section .location-container .section-container{
+    width: 100%;
+    /* border: 2px solid aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.location-wrapper .sub-section .location-container .section-container .s-1{
+    background-color: #e5007f;
+}
+.location-wrapper .sub-section .location-container .section-container .s-2{
+    background-color: #0571b9;
+}
+.location-wrapper .sub-section .location-container .section-container .s-3{
+    background-color: #ff7e00;
+}
+.location-wrapper .sub-section .location-container .section-container .s-4{
+    background-color: #ff3500;
+}
+.location-wrapper .sub-section .location-container .section-container .section{
+    flex: 1 1 25%;
+    max-width: 250px;
+    box-sizing: border-box;
+}
 
+/* ########################################################################################### */
+/* Initial state: zoomed-in */
+.location-wrapper .sub-section .location-container .section-container .section {
+    transform: scale(0.5);                  /* Zoomed in */
+    transition: transform 1s ease;          /* Smooth transition */
+    opacity: 0;                           /* Hidden initially */
+}
 
+/* Final state: normal size */
+.location-wrapper .sub-section .location-container .section-container .section.show {
+    transform: scale(1);                    /* Back to original scale */
+    opacity: 1;                             /* Fully visible */
+}
+/* ########################################################################################### */
 
+.location-wrapper .sub-section .location-container .section-container .section .content{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.location-wrapper .sub-section .location-container .section-container .section .content img{
+    width: 100%;
+    height: auto;
+}
+.location-wrapper .sub-section .location-container .section-container .section .content h3 a{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.location-wrapper .sub-section .location-container .section-container .section .content h3 a:hover{
+    color: #0571b9;
+}
+.location-wrapper .sub-section .location-container .section-container .section .content h3 .blue:hover{
+    color: #363636;   
+}
+.location-wrapper .sub-section .location-container .section-container .section .content .btn{
+    margin: 30px 0 35px;
+}
+.location-wrapper .sub-section .location-container .section-container .section .content .btn button{
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    color: #fff;
+    background: #54595f;
+    border-radius: 3px;
+    padding: 12px 24px;
+}
+/* 3 */
+.location-wrapper .sub-section .location-container .address-img-container{
+    /* border: 2px solid chartreuse; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+/* text-col */
+.location-wrapper .sub-section .location-container .address-img-container .text-col{
+    flex-basis: 50%;
+    margin: 40px 0;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.location-wrapper .sub-section .location-container .address-img-container .text-col h3{
+    font-family: "Abhaya Libre", serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+/* img-col */
+.location-wrapper .sub-section .location-container .address-img-container .img-col{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.location-wrapper .sub-section .location-container .address-img-container .img-col img{
+    width: 600px;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* media-query - location-wrapper  */
+@media screen and (max-width: 1670px) {
+    .location-wrapper .sub-section{
+        margin: 0 80px;
+    }
+}
+@media screen and (max-width: 1565px){
+    .location-wrapper .sub-section{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1024px){
+    .location-wrapper .sub-section .location-container .section-container .section .content .btn button{
+        padding: 10px 20px;
+    }
+    .location-wrapper .sub-section .location-container .address-img-container .text-col h3{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 767px){
+    .location-wrapper .sub-section .location-container .section-container{
+        flex-direction: column;
+    }
+    .location-wrapper .sub-section .location-container .section-container .section {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .location-wrapper .sub-section .location-container .section-container .section .content .btn button{
+        padding: 12px 24px;
+    }
+    .location-wrapper .sub-section .location-container .address-img-container{
+        display: none;
+    }
+    /* ########################################################################################### */
+    /* Initial state: zoomed-in */
+    .location-wrapper .sub-section .location-container .section-container .section {
+        transform: scale(0.6);                  /* Zoomed in */
+        transition: transform 1s ease;          /* Smooth transition */
+        opacity: 0;                           /* Hidden initially */
+    /* ########################################################################################### */
+    }
+}
+@media screen and (max-width: 650px){
+    .location-wrapper .sub-section{
+        padding: 0 3.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .location-wrapper .sub-section{
+        padding: 0 2rem;
+    }
+    .location-wrapper .sub-section .location-container .title h3{
+        font-size: 25px;
+    }
+}
 
 
 /* -------------------------------------------------------------------------------- */
@@ -515,6 +724,7 @@ a{
 }
 .footer .sub-section .footer-section-container .type-1 .part-1 .social-media-profile a i:hover{
     color: #0571b9;
+    transition: color 0.4s ease;
 }
 
 /* part - 2 */
@@ -889,6 +1099,7 @@ a{
     }
 }
 
+
 /* -------------------------------------------------------------------------------- */
 /* copy-right-section */
 
@@ -926,6 +1137,7 @@ a{
     width: 100px;
     height: 28px;
 }
+
 
 /* -------------------------------------------------------------------------------- */
 /* media-query - copy-right-section */

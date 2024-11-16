@@ -1,5 +1,4 @@
-
-// --------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // changing the styles on scrolling - 20% from the top
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -65,3 +64,38 @@ sidebarIcon.addEventListener('click', () => {
 crossX.addEventListener('click', () => {
     sideNav.style.display = "none"
 })
+
+// ------------------------------------------------------------------------------------------------ //
+// Section Visibility Animation with Intersection Observer API
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all sections inside all section containers
+    const sections = document.querySelectorAll('.section-container .section');
+
+    // Intersection Observer options
+    const observerOptions = {
+        root: null,            // Viewport is the root
+        rootMargin: '0px',     // No margin offset
+        threshold: 0.15        // Trigger when 15% of the section is visible
+    };
+
+    // Callback for observing sections
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the 'show' class to the section when it enters the viewport
+                entry.target.classList.add('show');
+
+                // Stop observing this section once the animation is applied
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Initialize the observer
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
