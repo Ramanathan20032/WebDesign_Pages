@@ -409,10 +409,122 @@ a{
 }
 
 
+/* -------------------------------------------------------------------------------- */
+/* awards - section */
+.awards-wrapper{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+}
+
+/* sub-section */
+.awards-wrapper .sub-section{
+    border: 2px solid black;
+    padding: 0 4.6rem;
+    margin: 0 160px;
+    box-sizing: border-box;
+}
+.awards-wrapper .sub-section .awards-container{
+    border: 2px solid navy;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+.awards-wrapper .sub-section .awards-container .section{
+    border: 2px solid springgreen;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Ensures flex items wrap if they don't fit in a row */
+}
+.awards-wrapper .sub-section .awards-container .section .content{
+    border: 2px solid yellow;
+    flex-basis: calc(25% - 8px); /* Adjust this based on the desired width of each content */
+    max-width: calc(25% - 8px); /* Ensure content does not exceed 25% */
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+.awards-wrapper .sub-section .awards-container .section .content .img-row,
+.awards-wrapper .sub-section .awards-container .section .content .text-row{
+    width: 100%;
+}
+.awards-wrapper .sub-section .awards-container .section .content .img-row .award-img{
+    /* none */
+}
+
+.awards-wrapper .sub-section .awards-container .section .content .img-row .award-img img{
+    width: 100%; 
+    height: auto; 
+    max-width: 190px; 
+}
+.awards-wrapper .sub-section .awards-container .section .content .text-row .award-title{
+    margin-bottom: 5px;
+}
+.awards-wrapper .sub-section .awards-container .section .content .text-row .award-title span{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ea348b;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.awards-wrapper .sub-section .awards-container .section .content .text-row .award-desc p{
+    color: #000;
+}
 
 
 
-
+/* -------------------------------------------------------------------------------- */
+/* media-Query - awards-container */
+@media screen and (max-width: 1670px) {
+    .awards-wrapper .sub-section{
+        margin: 0 80px;
+    }
+}
+@media screen and (max-width: 1565px){
+    .awards-wrapper .sub-section{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .awards-wrapper .sub-section .awards-container .section{
+        padding: 0;
+    }
+    .awards-wrapper .sub-section .awards-container .sec-1{
+        padding-top: 15px;
+    }
+    .awards-wrapper .sub-section .awards-container .sec-4{
+        padding-bottom: 15px;
+    }
+    .awards-wrapper .sub-section .awards-container .section .content{
+        flex-basis: calc(50% - 8px); /* Reduce content width on small screens */
+        max-width: calc(50% - 8px);
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 640px){
+    .awards-wrapper .sub-section{
+        padding: 0 3.4rem; 
+    }
+}
+@media screen and (max-width: 540px){
+    .awards-wrapper .sub-section .awards-container .section .content{
+        flex-basis: 100%; /* Content will take full width on small screens */
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .awards-wrapper .sub-section{
+        padding: 0 2rem;
+    }
+}
 
 
 /* -------------------------------------------------------------------------------- */
