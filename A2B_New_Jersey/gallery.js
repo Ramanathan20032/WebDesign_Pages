@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------
 // changing the styles on scrolling - 20% from the top
 
@@ -65,3 +64,33 @@ sidebarIcon.addEventListener('click', () => {
 crossX.addEventListener('click', () => {
     sideNav.style.display = "none"
 })
+
+
+// --------------------------------------------------------------------------------
+/* light-box - image viewing */
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.gallery-container img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    // Show lightbox when an image is clicked
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            lightboxImage.src = image.src; // Set the lightbox image source
+            lightbox.style.display = 'flex'; // Show lightbox
+        });
+    });
+
+    // Close lightbox when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImage) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
