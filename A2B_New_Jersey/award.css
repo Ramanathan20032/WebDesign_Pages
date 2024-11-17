@@ -418,20 +418,20 @@ a{
 
 /* sub-section */
 .awards-wrapper .sub-section{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 0 4.6rem;
     margin: 0 160px;
     box-sizing: border-box;
 }
 .awards-wrapper .sub-section .awards-container{
-    border: 2px solid navy;
+    /* border: 2px solid navy; */
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 .awards-wrapper .sub-section .awards-container .section{
-    border: 2px solid springgreen;
+    /* border: 2px solid springgreen; */
     padding: 40px 0;
     display: flex;
     align-items: center;
@@ -441,7 +441,7 @@ a{
     flex-wrap: wrap; /* Ensures flex items wrap if they don't fit in a row */
 }
 .awards-wrapper .sub-section .awards-container .section .content{
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     flex-basis: calc(25% - 8px); /* Adjust this based on the desired width of each content */
     max-width: calc(25% - 8px); /* Ensure content does not exceed 25% */
     padding: 7px;
