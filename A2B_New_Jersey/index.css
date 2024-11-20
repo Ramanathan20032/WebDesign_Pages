@@ -325,6 +325,10 @@ a{
     .section-1{
         display: none;
     }
+    .section-2{
+        height: 55vh;
+        width: 100%;
+    }
     .section-2 .nav-container nav ul{
         display: none;
     }
@@ -334,12 +338,21 @@ a{
     
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 767px){
+    .section-2{
+        height: 40vh;
+        width: 100%;
+    }
     .section-2 .nav-container nav {
         padding: 0 2.75rem;
     }
 }
-
+@media screen and (max-width: 560px) {
+    .section-2{
+        width: 100%;
+        height: 35vh;
+    }
+}
 @media screen and (max-width: 480px){
     .section-2 {
         background-position: center;
@@ -347,7 +360,7 @@ a{
         background-repeat: no-repeat;
         transition: background-image 1s;
         padding: 0;
-        height: 32vh;
+        height: 33vh;
         width: 100%;
     }
     .section-2 .nav-container nav {
@@ -722,7 +735,7 @@ a{
         margin-left: 40px;
     }
     .section-3 .sub-section-3{
-        padding: 60px 2rem 0;
+        padding: 60px 1.5rem 0;
     }
 }
 
@@ -821,7 +834,7 @@ a{
 }
 .section-4 .sub-section .menu-container .section-1 .part-1 .subtitle-title .title{
     font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     color: #000;
 }
@@ -850,7 +863,7 @@ a{
     color: #363636;
     margin-top: 5px;
     margin-bottom: 25px;
-    font-weight: 300;
+    font-weight: 350;
     letter-spacing: 0.5px;
     word-spacing: 0.2px;
 }
@@ -909,7 +922,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-4 .sub-section{
-        padding: 60px 2rem 0;
+        padding: 60px 1.5rem 0;
     }
 }
 
@@ -976,7 +989,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-5 .sub-section{
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
 }
 
@@ -1163,7 +1176,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-6 .sub-section{
-        padding: 0px 2rem;
+        padding: 0px 1.5rem;
     }
     .section-6 .sub-section .about-us-container{
         padding: 60px 0px;
@@ -1397,7 +1410,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-7 .sub-section{
-        padding: 0px 2rem;
+        padding: 0px 1.5rem;
     }
     .section-7 .sub-section .reach-us-container{
         padding-bottom: 60px;
@@ -1601,7 +1614,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-8 .sub-section{
-        padding: 0px 2rem;
+        padding: 0px 1.5rem;
     }
 }
 @media screen and (max-width: 427px) {
@@ -2080,7 +2093,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .footer .sub-section{
-        padding: 28px 2rem 38px;
+        padding: 28px 1.5rem 38px;
     }
     .footer .sub-section .footer-section-container .type-2 .part-4{
         padding-left: 0px;
@@ -2175,7 +2188,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-9 .sub-section{
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     .section-9 .sub-section .copy-right-container .text-content{
         font-size: 13px;

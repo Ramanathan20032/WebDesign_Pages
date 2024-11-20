@@ -882,7 +882,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .footer .sub-section{
-        padding: 28px 2rem 38px;
+        padding: 28px 1.5rem 38px;
     }
     .footer .sub-section .footer-section-container .type-2 .part-4{
         padding-left: 0px;
@@ -977,7 +977,7 @@ a{
 }
 @media screen and (max-width: 480px) {
     .section-9 .sub-section{
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     .section-9 .sub-section .copy-right-container .text-content{
         font-size: 13px;
