@@ -488,6 +488,19 @@ a{
     overflow: hidden; /* Ensures any image outside the container is hidden */
     position: relative;
 }
+/* Initial State */
+.about-us-wrapper .sub-section .about-us-container .img-text-container .img-col .img-container img {
+    transform: scale(0.8); /* Slightly shrink the image */
+    opacity: 0; /* Make the image invisible initially */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition for scale and opacity */
+}
+  
+/* When In View */
+.about-us-wrapper .sub-section .about-us-container .img-text-container .img-col .img-container img.in-view {
+    transform: scale(1); /* Scale to normal size */
+    opacity: 1; /* Fully visible */
+}
+  
 .about-us-wrapper .sub-section .about-us-container .img-text-container .img-col .img-container img{
     min-width: 450px;
     height: auto;
@@ -614,6 +627,37 @@ a{
     justify-content: space-between;
     text-align: center;
 }
+
+/* -------------------------------------------------------------------- */
+/* Initial style before the transition */
+.testimonial-part-2 .sec-1,
+.testimonial-part-2 .sec-2,
+.testimonial-part-2 .sec-3 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add delays for each section */
+.testimonial-part-2 .sec-1.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s; /* Start immediately */
+}
+
+.testimonial-part-2 .sec-2.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s; /* Start 0.3s after sec-1 */
+}
+
+.testimonial-part-2 .sec-3.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s; /* Start 0.6s after sec-1 */
+}
+/* -------------------------------------------------------------------- */
+
 .about-us-wrapper .sub-section .about-us-container .testimonial-container .testimonial-part-2 .section{
     flex-basis: 30%;
     min-height: 400px;
