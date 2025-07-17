@@ -8,3 +8,10 @@
 
 #### https://barbar-shop-design.netlify.app        - barbar Shop
 
+#### https://durkinspizza.maghildemo.com/          - DurKins Pizza
+
+#### https://maghildemo.com/                       - Sri Krishna Vilas
+
+#### https://athidhiaalayam.com/                   - athidhiaalayam
+
+
