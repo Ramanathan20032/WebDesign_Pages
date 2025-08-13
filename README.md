@@ -2,7 +2,7 @@
 
 #### https://durkinspizza.maghildemo.com/          - DurKins Pizza
 
-#### https://maghildemo.com/                       - Sri Krishna Vilas
+#### https://srikrishnavilas.com/                  - Sri Krishna Vilas
 
 #### https://athidhiaalayam.com/                   - athidhiaalayam
 
